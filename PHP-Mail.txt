@@ -1,0 +1,14 @@
+$to = "$user";
+$subject = "Subject";
+$message = "Msg";
+
+$headers = "MIME-Version: 1.0" . "\r\n";
+$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+$header .= "From: Name <noreply@name.com>\r\n";
+
+$return_value = mail($to, $subject, $message, $header);
+
+if ($return_value == true) 
+    echo "Email Sent Successfully ...";
+else 
+    echo "Email Could Not Be Sent ...";
